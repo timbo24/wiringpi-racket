@@ -29,7 +29,7 @@
 (define (wait-for-gba)
   (array-cpy! buf 0 '(#x00 #x00 #x62 #x02))
 
-  (wiringPiSPIDataRW SPICHANNEL (array-ptr buf) 4)
+  (define (ret  buf) (wiringPiSPIDataRW SPICHANNEL buf 4))
   (displayln (format 
     "got: 0x~x 0x~x 0x~x 0x~x"
     (array-ref buf 0)

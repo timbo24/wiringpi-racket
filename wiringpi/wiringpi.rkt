@@ -24,7 +24,7 @@
 ;; SPI functions
 (define-wiringpi wiringPiSPISetup (_fun _int _int -> _int))
 (define-wiringpi wiringPiSPISetupMode (_fun _int _int _int -> _int))
-(define-wiringpi wiringPiSPIDataRW (_fun _int _pointer _int -> _int))
+(define-wiringpi wiringPiSPIDataRW (_fun _int (data : (_ptr io _uint)) _int -> (r : _int) -> (values r data)))
 
 (define-wiringpi wiringPiSetup (_fun -> _int))
 (define-wiringpi wiringPiSetupGpio (_fun -> _int))
