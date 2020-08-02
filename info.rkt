@@ -1,3 +1,3 @@
 #lang info
 
-(define collection "wiringpi")
+(define collection "wiring-pi")
